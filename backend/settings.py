@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 SIMPLE_JWT = {
     # Token expira após 15 minutos
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=3600),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     # Atualiza tempo de expiração se o usuário continuar ativo
     'ROTATE_REFRESH_TOKENS': True,
     'REFRESH_TOKEN_LIFETIME': timedelta(days=15),  # Refresh Token dura 1 dia
@@ -44,14 +44,9 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 # Se usar cookies/sessão, habilite e confie na origem (JWT não precisa)
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:8000",
-    "https://react-app-neon-nine.vercel.app/"
-]
-CORS_ALLOW_HEADERS = ['authorization', 'content-type']
-ALLOWED_HOSTS = ["127.0.0.1", "localhost:8000", "react-app-neon-nine.vercel.app"]
+CSRF_TRUSTED_ORIGINS =  [ "http://localhost:3000", "http://127.0.0.1:3000", "http://127.0.0.1:8000", "https://react-app-neon-nine.vercel.app" ]
+CORS_ALLOW_HEADERS = ['authorization', 'content-type', 'localhost']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "react-app-neon-nine.vercel.app"]
 
 
 
