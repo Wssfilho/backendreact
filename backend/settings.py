@@ -41,6 +41,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
 # Se usar cookies/sessão, habilite e confie na origem (JWT não precisa)
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
@@ -78,6 +79,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
