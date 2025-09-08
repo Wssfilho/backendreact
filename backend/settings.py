@@ -37,7 +37,8 @@ DEBUG = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://127.0.0.1:8000"
+    "http://127.0.0.1:8000",
+    "https://react-app-neon-nine.vercel.app"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -46,10 +47,11 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://127.0.0.1:8000"
+    "http://127.0.0.1:8000",
+    "https://react-app-neon-nine.vercel.app/"
 ]
 CORS_ALLOW_HEADERS = ['authorization', 'content-type']
-ALLOWED_HOSTS = ["127.0.0.1", "localhost:8000"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost:8000", "react-app-neon-nine.vercel.app"]
 
 
 
