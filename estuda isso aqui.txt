@@ -1,6 +1,0 @@
-para substituir o django vc tem q usar alguma ORM, 
-eu recomendo o prisma, tudo vai ser feito no projeto next
-nao vai ter um projeto separado para o backend. As rotas são feitas
-usando as rotas do proprio nextjs, pesquisa por "Next.js api routes"
-
-:DDDD
