@@ -70,7 +70,9 @@ class TarefaModelViewSet(ModelViewSet):
         
     def delete(self, request):
         id = request.GET.get('id')
-        taf = Tarefa.objects.get(id=id)
+        if not id:
+            return Response({'status':404, 'msg': 'bad request'})
+        taf = Tarefa.objects.filter(id=id)
         taf.delete()
         return Response({'status': 200, 'msg': 'Deleted!'})
         
